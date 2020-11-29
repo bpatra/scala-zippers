@@ -6,13 +6,14 @@ object TreeViewer {
       case Node(value, children) =>{
         var indent = indentSrc;
         printf(indentSrc)
+
         if (last) {
           printf("└╴")
           indent += "  "
         }
         else {
-        printf("├╴")
-        indent += "│ "
+          printf("├╴")
+          indent += "│ "
         }
         println(value);
 
@@ -23,5 +24,10 @@ object TreeViewer {
         })
       }
     }
+  }
+
+
+  def printTree(tree: Tree): Unit ={
+    printNode(tree, indentSrc = "", last = true)
   }
 }
