@@ -1,1 +1,0 @@
-class Mutable[A](var value: A)

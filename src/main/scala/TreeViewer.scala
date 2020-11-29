@@ -1,8 +1,7 @@
 object TreeViewer {
 
-  def printNode(tree: Tree, indentSrc: String, last: Boolean): Unit = {
+  def printNode(tree: Node, indentSrc: String, last: Boolean): Unit = {
     tree match {
-      case Empty() => printf("none")
       case Node(value, children) =>{
         var indent = indentSrc;
         printf(indentSrc)
@@ -27,7 +26,7 @@ object TreeViewer {
   }
 
 
-  def printTree(tree: Tree): Unit ={
+  def printTree(tree: Node): Unit ={
     printNode(tree, indentSrc = "", last = true)
   }
 }
